@@ -128,7 +128,7 @@ async def on_message(message):
     if message.content.startswith('`kill'):
         randomlist = ['the bullet bounced back and hit you','you hit the person',]
         await client.send_message(message.channel,(random.choice(randomlist)))
-    if message.content == '*menu':
+    if message.content == '`menu':
         await client.send_message(message.channel,'You can order a, Big mac, A whooper, and a large soda (pls note that you dont have to use the prefix for these commands)')
     if message.content == 'Big mac':
         await client.send_message(message.channel,'*Gives*')

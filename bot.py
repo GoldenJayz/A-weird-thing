@@ -5,7 +5,6 @@ import asyncio
 import time
 import random
 from discord import Game
-import os
 
 
 Client = discord.client
@@ -35,7 +34,7 @@ async def on_message(message):
     if message.content == '`messagetopuppy':
         await client.send_message(message.channel,'Hello, I am jay (Gold). I will not be talking to you puppy. I will have to think about the fight we had yesterday. After that fight I might not wanna be your friend anymore. If I dont respond to you on discord, you will know why. If you want to say anything to me DM me.')
     if message.content == '`commands':
-        await client.send_message(message.channel,'*mlg, *meme, *bugcall, *creator, *tag, *summon, *sadmusic, *pumpernickel, *deported')
+        await client.send_message(message.channel,'`mlg, `meme, `bugcall, `creator, `tag, `summon, `sadmusic, `pumpernickel, `deported, `kill, `8ball, `poop, `dump, `kiss, `marry, `fart!')
     if message.content == '`puppy':
         em = discord.Embed(description='')
         em.set_image(url='https://www.google.com/search?biw=1678&bih=979&tbm=isch&sa=1&ei=QAC9W9rOF8-9ggeeyqbICA&q=crying+&oq=crying+&gs_l=img.3..0i67j0j0i67l2j0l4j0i67l2.1387.4433..4729...1.0..2.72.714.12......2....1..gws-wiz-img.....0..35i39.6d-h819jVfw#imgrc=AU3FbLE0u_TP4M:')
@@ -122,4 +121,28 @@ async def on_message(message):
         em = discord.Embed(description='You unclogged the toilet!')
         em.set_image(url='https://media.giphy.com/media/5Zuiy7XPMH21O/giphy.gif')
         await client.send_message(message.channel, embed=em)
+    if message.content.startswith('`8ball'):
+        randomlist = ['Maybe','Yes','No',]
+        await client.send_message(message.channel,(random.choice(randomlist)))
+    if message.content.startswith('`kill'):
+        randomlist = ['the bullet bounced back and hit you','you hit the person',]
+        await client.send_message(message.channel,(random.choice(randomlist)))
+    if message.content == '*menu':
+        await client.send_message(message.channel,'You can order a, Big mac, A whooper, and a large soda (pls note that you dont have to use the prefix for these commands)')
+    if message.content == 'Big mac':
+        await client.send_message(message.channel,'*Gives*')
+    if message.content == 'big mac':
+        await client.send_message(message.channel,'*Gives*')
+    if message.content == 'Big Mac':
+        await client.send_message(message.channel,'*Gives*')
+    if message.content == 'Whooper':
+        await client.send_message(message.channel,'*Gives*')
+    if message.content == 'whooper':
+        await client.send_message(message.channel,'*Gives*')
+    if message.content == 'Large Soda':
+        await client.send_message(message.channel,'*Gives*')
+    if message.content == 'Large soda':
+        await client.send_message(message.channel,'*Gives*')
+    if message.content == 'large soda':
+        await client.send_message(message.channel,'*Gives*')
 client.run(str(os.environ.get('BOT_TOKEN')))

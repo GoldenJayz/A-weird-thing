@@ -15,7 +15,7 @@ Clientdiscord = discord.Client()
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='Gold Update this code', type = 3))
+    await client.change_presence(game=Game(name='V4 Is here', type = 3))
     print('Loading AlteriaALPHA V3.1.2, ... Loaded Successfully.') 
 
 @client.event

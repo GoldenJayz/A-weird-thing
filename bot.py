@@ -15,7 +15,7 @@ Clientdiscord = discord.Client()
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='V4 Is here', type = 3))
+    await client.change_presence(game=Game(name='Gold Update this code', type = 3))
     print('Loading AlteriaALPHA V3.1.2, ... Loaded Successfully.') 
 
 @client.event
@@ -128,7 +128,7 @@ async def on_message(message):
     if message.content.startswith('`kill'):
         randomlist = ['the bullet bounced back and hit you','you hit the person',]
         await client.send_message(message.channel,(random.choice(randomlist)))
-    if message.content == '`menu':
+    if message.content == '*menu':
         await client.send_message(message.channel,'You can order a, Big mac, A whooper, and a large soda (pls note that you dont have to use the prefix for these commands)')
     if message.content == 'Big mac':
         await client.send_message(message.channel,'*Gives*')
@@ -146,4 +146,13 @@ async def on_message(message):
         await client.send_message(message.channel,'*Gives*')
     if message.content == 'large soda':
         await client.send_message(message.channel,'*Gives*')
+    if message.content == '`about':
+        await client.send_message(message.channel,'A little about Gold. Well Gold is the owner of this bot. He is a die hard Pokemon fan (It may sound childish but its amazing). Gold also, likes Zelda and has completed all Zelda and Pokemon games. Gold has caught them all in Pokemon Omega Ruby. Golds favorite Pokemon game is Pokemon Heartgold (Thats how I got my username LMAO). Gold Originated from Roblox as the user "jayboss980". He was a stupid kid then. But soon later he quit and started getting intrested in coding and created his first bot "Jay's Assistant". This bot was absolute CRAP. It could only do 4 commands and those 4 commands are in this bot. (BUT THERE HIDDEN so don't even try).')
+    if message.content == '`Alteria':
+        await client.send_message(message.channel,'Alteria originaly was named "AlteriaALPHA". And, since Gold was new to coding and didn't even host his bot 24/7. He used github. AND PASTED HIS BOTS TOKEN. So somebody stole my bots token and destroyed everyone of my friends Discord servers and mine. (This is a screenshot https://cdn.discordapp.com/attachments/516304668528214016/516370555260370945/image0.png) But after that. I still had a old file of Alteria and added insane protection to Alteria so nobody can touch it. That bot's name was called AlteriaREWRITE.')
+    if message.content == '`alteria':
+        await client.send_message(message.channel,'Alteria originaly was named "AlteriaALPHA". And, since Gold was new to coding and didn't even host his bot 24/7. He used github. AND PASTED HIS BOTS TOKEN. So somebody stole my bots token and destroyed everyone of my friends Discord servers and mine. (This is a screenshot https://cdn.discordapp.com/attachments/516304668528214016/516370555260370945/image0.png) But after that. I still had a old file of Alteria and added insane protection to Alteria so nobody can touch it. That bot's name was called AlteriaREWRITE.')
+    if message.content.startswith('`missletoe'):
+        randomlist = ['You Walked under a missletoe and got kissed','Nobody saw you walk under the missletoe',]
+        await client.send_message(message.channel,(random.choice(randomlist)))
 client.run(str(os.environ.get('BOT_TOKEN')))

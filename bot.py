@@ -31,9 +31,7 @@ async def on_message(message):
     if message.content == '`meme':
         await client.send_message(message.channel,'https://cdn.discordapp.com/attachments/277196107279237120/484473935354920970/567ilop.mov')
     if message.content == '`mlg':
-        await client.send_message(message.channel,'https://cdn.discordapp.com/attachments/460117183520047115/499031279250046976/NORMIES_LEAVE_REEE.mp4')
-    if message.content == '`messagetopuppy':
-        await client.send_message(message.channel,'Hello, I am jay (Gold). I will not be talking to you puppy. I will have to think about the fight we had yesterday. After that fight I might not wanna be your friend anymore. If I dont respond to you on discord, you will know why. If you want to say anything to me DM me.')
+        await client.send_message(message.channel,'https://cdn.discordapp.com/attachments/460117183520047115/499031279250046976/NORMIES_LEAVE_REEE.mp4'
     if message.content == '`commands':
         await client.send_message(message.channel,'`mlg, `meme, `bugcall, `creator, `tag, `summon, `sadmusic, `pumpernickel, `deported, `kill, `8ball, `poop, `dump, `kiss, `marry, `fart!')
     if message.content == '`puppy':

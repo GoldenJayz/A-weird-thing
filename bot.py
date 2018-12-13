@@ -31,7 +31,7 @@ async def on_message(message):
     if message.content == '`meme':
         await client.send_message(message.channel,'https://cdn.discordapp.com/attachments/277196107279237120/484473935354920970/567ilop.mov')
     if message.content == '`mlg':
-        await client.send_message(message.channel,'https://cdn.discordapp.com/attachments/460117183520047115/499031279250046976/NORMIES_LEAVE_REEE.mp4'
+        await client.send_message(message.channel,'https://cdn.discordapp.com/attachments/460117183520047115/499031279250046976/NORMIES_LEAVE_REEE.mp4')
     if message.content == '`commands':
         await client.send_message(message.channel,'`mlg, `meme, `bugcall, `creator, `tag, `summon, `sadmusic, `pumpernickel, `deported, `kill, `8ball, `poop, `dump, `kiss, `marry, `fart!')
     if message.content == '`puppy':
@@ -154,3 +154,4 @@ async def on_message(message):
         randomlist = ['You Walked under a missletoe and got kissed','Nobody saw you walk under the missletoe',]
         await client.send_message(message.channel,(random.choice(randomlist)))
 client.run(str(os.environ.get('BOT_TOKEN')))
+

@@ -32,4 +32,4 @@ if __name__== "__main__":
             exc = '{}: {}'.format(type(e).__name__, e)
             print('Failed to load extension {}\n()'.format(extension, exc))
 
-bot.run('NTE2MjkzNTg0MTQ4NzU4NTQ2.Dtxjmw.e-C8N025Y9MwY4OqJeK-UPnCtTs')
+client.run(str(os.environ.get('BOT_TOKEN')))

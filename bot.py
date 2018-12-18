@@ -15,7 +15,7 @@ Clientdiscord = discord.Client()
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='Alteria v4.5 Christmas :o', type = 3))
+    await client.change_presence(game=Game(name='Alteria In Testing Mode', type = 3))
     print('Loading AlteriaALPHA V3.1.2, ... Loaded Successfully.') 
 
 @client.event
@@ -33,10 +33,7 @@ async def on_message(message):
     if message.content == '`mlg':
         await client.send_message(message.channel,'https://cdn.discordapp.com/attachments/460117183520047115/499031279250046976/NORMIES_LEAVE_REEE.mp4')
     if message.content == '`commands':
-        await client.send_message(message.channel,'`mlg, `meme, `bugcall, `creator, `tag, `summon, `sadmusic, `pumpernickel, `deported, `kill, `8ball, `poop, `dump, `kiss, `marry, `fart!')
-    if message.content == '`puppy':
-        em = discord.Embed(description='')
-        em.set_image(url='https://www.google.com/search?biw=1678&bih=979&tbm=isch&sa=1&ei=QAC9W9rOF8-9ggeeyqbICA&q=crying+&oq=crying+&gs_l=img.3..0i67j0j0i67l2j0l4j0i67l2.1387.4433..4729...1.0..2.72.714.12......2....1..gws-wiz-img.....0..35i39.6d-h819jVfw#imgrc=AU3FbLE0u_TP4M:')
+        em = discord.Embed(description='`Here is a list of commands. Fart, deported, slap, gold, invite, kiss, missletoe, marry, fart, dump, poop` **More is coming soon**')
         await client.send_message(message.channel, embed=em)
     if message.content == '`sadmusic':
         await client.send_message(message.channel,'https://www.youtube.com/watch?v=eXDU9um19HM')

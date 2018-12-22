@@ -1,5 +1,4 @@
 import asyncio
-import os
 import discord
 from discord.ext import commands
 if not discord.opus.is_loaded():
@@ -229,4 +228,3 @@ class Music:
 def setup(bot):
     bot.add_cog(Music(bot))
     print('Music is loaded')
-client.run(str(os.environ.get('BOT_TOKEN')))

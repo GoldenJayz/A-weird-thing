@@ -1,4 +1,5 @@
 import asyncio
+import os
 import discord
 from discord.ext import commands
 if not discord.opus.is_loaded():

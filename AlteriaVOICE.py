@@ -5,7 +5,7 @@ from discord.voice_client import VoiceClient
 
 
 startup_extensions = ["Music"]
-bot = commands.Bot("`")
+bot = commands.Bot("-")
 
 @bot.event
 async def on_ready():

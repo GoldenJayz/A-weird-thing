@@ -154,6 +154,6 @@ async def on_message(message):
     if message.content == ('-stats'):
         await client.send_message(message.channel,'`This bot is running on Microsoft windows 64x bit. Shard: 1/1`')
     if message.content == ('-upload'):
-        await client.send_message(message.channel,'**Hello, Gold just uploaded a Youtube Video about Alteria. Go check it out--->https://www.youtube.com/channel/UCR6r5mq-pD3201_CBY-YeLA?view_as=subscriber**')
+        await client.send_message(message.channel,'**@everyone Hello, Gold just uploaded a Youtube Video about Alteria. Go check it out--->https://www.youtube.com/channel/UCR6r5mq-pD3201_CBY-YeLA?view_as=subscriber**')
 client.run(str(os.environ.get('BOT_TOKEN')))
 

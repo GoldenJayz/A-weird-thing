@@ -32,5 +32,4 @@ if __name__== "__main__":
         except Exception as e:
             exc = '{}: {}'.format(type(e).__name__, e)
             print('Failed to load extension {}\n()'.format(extension, exc))
-
 client.run(str(os.environ.get('BOT_TOKEN')))

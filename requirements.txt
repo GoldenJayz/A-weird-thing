@@ -1,7 +1,0 @@
-discord
-asyncio
-Pymoe
-pip
-youtube.dl
-ffmpeg
-discord.py[voice]

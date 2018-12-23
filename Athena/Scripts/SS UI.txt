@@ -1,0 +1,615 @@
+-- Farewell Infortality.
+-- Version: 2.82
+-- Instances:
+local AthenaSSUI = Instance.new("ScreenGui")
+local One = Instance.new("Frame")
+local Main = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local RockNRoll = Instance.new("TextButton")
+local GrabKnife1 = Instance.new("TextButton")
+local GrabKnife3 = Instance.new("TextButton")
+local DualUltima = Instance.new("TextButton")
+local Bong = Instance.new("TextButton")
+local ChatHax = Instance.new("TextButton")
+local Flamethrower = Instance.new("TextButton")
+local MML = Instance.new("TextButton")
+local KitchenGun = Instance.new("TextButton")
+local MustardGas = Instance.new("TextButton")
+local CandyVan = Instance.new("TextButton")
+local AllahMobile = Instance.new("TextButton")
+local Seymour = Instance.new("TextButton")
+local ToadRoast = Instance.new("TextButton")
+local Rocket = Instance.new("TextButton")
+local NukeLauncher = Instance.new("TextButton")
+local RavengerClaws = Instance.new("TextButton")
+local Demon = Instance.new("TextButton")
+local NoobGun = Instance.new("TextButton")
+local Pandora = Instance.new("TextButton")
+local GodSlayer = Instance.new("TextButton")
+local BloodyAngel = Instance.new("TextButton")
+local StarGlitcher = Instance.new("TextButton")
+local Genocider = Instance.new("TextButton")
+local Sadist = Instance.new("TextButton")
+local Banisher = Instance.new("TextButton")
+local NoobPowers = Instance.new("TextButton")
+local NebulaAngel = Instance.new("TextButton")
+local StellarPhoenix = Instance.new("TextButton")
+local Bloxwatch = Instance.new("TextButton")
+local ContentCop = Instance.new("TextButton")
+local Sans = Instance.new("TextButton")
+local FrostGiant = Instance.new("TextButton")
+local Infamous = Instance.new("TextButton")
+local HackerSword = Instance.new("TextButton")
+local DominusKing = Instance.new("TextButton")
+local Lustris = Instance.new("TextButton")
+local Laxus = Instance.new("TextButton")
+local NebulaStaff = Instance.new("TextButton")
+local Hackerman = Instance.new("TextButton")
+local ShadowTitan = Instance.new("TextButton")
+local GodArc = Instance.new("TextButton")
+local SearingPandora = Instance.new("TextButton")
+local FalseGod = Instance.new("TextButton")
+local InternalWar = Instance.new("TextButton")
+local MasterOfNukes = Instance.new("TextButton")
+local ObamaIsGone = Instance.new("TextButton")
+local Flamingo = Instance.new("TextButton")
+local TopLabel = Instance.new("TextLabel")
+local SSSpacito = Instance.new("TextButton")
+local Chilli_Killi_yourself = Instance.new("TextButton")
+--Properties:
+AthenaSSUI.Name = "AthenaSSUI"
+AthenaSSUI.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+One.Name = "One"
+One.Parent = AthenaSSUI
+One.BackgroundColor3 = Color3.new(1, 1, 1)
+One.BackgroundTransparency = 1
+One.Draggable = true
+One.Position = UDim2.new(0.5, -220, 0.5, -165)
+One.Size = UDim2.new(0, 440, 0, 370)
+
+Main.Name = "Main"
+Main.Parent = One
+Main.Active = true
+Main.BackgroundColor3 = Color3.new(0.176471, 0.176471, 0.176471)
+Main.BorderColor3 = Color3.new(0, 0, 0)
+Main.Position = UDim2.new(0.5, -220, 0.5, -145)
+Main.Size = UDim2.new(0, 440, 0, 330)
+Main.CanvasSize = UDim2.new(0, 0, 5, 0)
+
+UIListLayout.Parent = Main
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 5)
+
+RockNRoll.Name = "RockNRoll"
+RockNRoll.Parent = Main
+RockNRoll.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+RockNRoll.BorderSizePixel = 0
+RockNRoll.Size = UDim2.new(1, 0, 0, 30)
+RockNRoll.Font = Enum.Font.SourceSansSemibold
+RockNRoll.Text = "Rock N' Roll McDonalds"
+RockNRoll.TextColor3 = Color3.new(1, 1, 1)
+RockNRoll.TextSize = 19
+
+GrabKnife1.Name = "GrabKnife1"
+GrabKnife1.Parent = Main
+GrabKnife1.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+GrabKnife1.BorderSizePixel = 0
+GrabKnife1.Size = UDim2.new(1, 0, 0, 30)
+GrabKnife1.Font = Enum.Font.SourceSansSemibold
+GrabKnife1.Text = "Grab Knife V1"
+GrabKnife1.TextColor3 = Color3.new(1, 1, 1)
+GrabKnife1.TextSize = 19
+
+GrabKnife3.Name = "GrabKnife3"
+GrabKnife3.Parent = Main
+GrabKnife3.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+GrabKnife3.BorderSizePixel = 0
+GrabKnife3.Size = UDim2.new(1, 0, 0, 30)
+GrabKnife3.Font = Enum.Font.SourceSansSemibold
+GrabKnife3.Text = "Grab Knife V3"
+GrabKnife3.TextColor3 = Color3.new(1, 1, 1)
+GrabKnife3.TextSize = 19
+
+DualUltima.Name = "DualUltima"
+DualUltima.Parent = Main
+DualUltima.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+DualUltima.BorderSizePixel = 0
+DualUltima.Size = UDim2.new(1, 0, 0, 30)
+DualUltima.Font = Enum.Font.SourceSansSemibold
+DualUltima.Text = "Dual Ultima"
+DualUltima.TextColor3 = Color3.new(1, 1, 1)
+DualUltima.TextSize = 19
+
+Bong.Name = "Bong"
+Bong.Parent = Main
+Bong.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Bong.BorderSizePixel = 0
+Bong.Size = UDim2.new(1, 0, 0, 30)
+Bong.Font = Enum.Font.SourceSansSemibold
+Bong.Text = "Bong"
+Bong.TextColor3 = Color3.new(1, 1, 1)
+Bong.TextSize = 19
+
+ChatHax.Name = "ChatHax"
+ChatHax.Parent = Main
+ChatHax.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+ChatHax.BorderSizePixel = 0
+ChatHax.Size = UDim2.new(1, 0, 0, 30)
+ChatHax.Font = Enum.Font.SourceSansSemibold
+ChatHax.Text = "Chat Hax"
+ChatHax.TextColor3 = Color3.new(1, 1, 1)
+ChatHax.TextSize = 19
+
+Flamethrower.Name = "Flamethrower"
+Flamethrower.Parent = Main
+Flamethrower.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Flamethrower.BorderSizePixel = 0
+Flamethrower.Size = UDim2.new(1, 0, 0, 30)
+Flamethrower.Font = Enum.Font.SourceSansSemibold
+Flamethrower.Text = "Flamethrower"
+Flamethrower.TextColor3 = Color3.new(1, 1, 1)
+Flamethrower.TextSize = 19
+
+MML.Name = "MML"
+MML.Parent = Main
+MML.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+MML.BorderSizePixel = 0
+MML.Size = UDim2.new(1, 0, 0, 30)
+MML.Font = Enum.Font.SourceSansSemibold
+MML.Text = "Maker Model Lua's Admin (MML)"
+MML.TextColor3 = Color3.new(1, 1, 1)
+MML.TextSize = 19
+
+KitchenGun.Name = "KitchenGun"
+KitchenGun.Parent = Main
+KitchenGun.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+KitchenGun.BorderSizePixel = 0
+KitchenGun.Size = UDim2.new(1, 0, 0, 30)
+KitchenGun.Font = Enum.Font.SourceSansSemibold
+KitchenGun.Text = "Kitchen Gun"
+KitchenGun.TextColor3 = Color3.new(1, 1, 1)
+KitchenGun.TextSize = 19
+
+MustardGas.Name = "MustardGas"
+MustardGas.Parent = Main
+MustardGas.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+MustardGas.BorderSizePixel = 0
+MustardGas.Size = UDim2.new(1, 0, 0, 30)
+MustardGas.Font = Enum.Font.SourceSansSemibold
+MustardGas.Text = "Mustard Gas"
+MustardGas.TextColor3 = Color3.new(1, 1, 1)
+MustardGas.TextSize = 19
+
+CandyVan.Name = "CandyVan"
+CandyVan.Parent = Main
+CandyVan.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+CandyVan.BorderSizePixel = 0
+CandyVan.Size = UDim2.new(1, 0, 0, 30)
+CandyVan.Font = Enum.Font.SourceSansSemibold
+CandyVan.Text = "Candy Van"
+CandyVan.TextColor3 = Color3.new(1, 1, 1)
+CandyVan.TextSize = 19
+
+AllahMobile.Name = "AllahMobile"
+AllahMobile.Parent = Main
+AllahMobile.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+AllahMobile.BorderSizePixel = 0
+AllahMobile.Size = UDim2.new(1, 0, 0, 30)
+AllahMobile.Font = Enum.Font.SourceSansSemibold
+AllahMobile.Text = "Allah Mobile"
+AllahMobile.TextColor3 = Color3.new(1, 1, 1)
+AllahMobile.TextSize = 19
+
+Seymour.Name = "Seymour"
+Seymour.Parent = Main
+Seymour.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Seymour.BorderSizePixel = 0
+Seymour.Size = UDim2.new(1, 0, 0, 30)
+Seymour.Font = Enum.Font.SourceSansSemibold
+Seymour.Text = "Seymour"
+Seymour.TextColor3 = Color3.new(1, 1, 1)
+Seymour.TextSize = 19
+
+ToadRoast.Name = "ToadRoast"
+ToadRoast.Parent = Main
+ToadRoast.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+ToadRoast.BorderSizePixel = 0
+ToadRoast.Size = UDim2.new(1, 0, 0, 30)
+ToadRoast.Font = Enum.Font.SourceSansSemibold
+ToadRoast.Text = "Toad Roast"
+ToadRoast.TextColor3 = Color3.new(1, 1, 1)
+ToadRoast.TextSize = 19
+
+Rocket.Name = "Rocket"
+Rocket.Parent = Main
+Rocket.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Rocket.BorderSizePixel = 0
+Rocket.Size = UDim2.new(1, 0, 0, 30)
+Rocket.Font = Enum.Font.SourceSansSemibold
+Rocket.Text = "Falcon 9 GUI"
+Rocket.TextColor3 = Color3.new(1, 1, 1)
+Rocket.TextSize = 19
+
+NukeLauncher.Name = "NukeLauncher"
+NukeLauncher.Parent = Main
+NukeLauncher.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+NukeLauncher.BorderSizePixel = 0
+NukeLauncher.Size = UDim2.new(1, 0, 0, 30)
+NukeLauncher.Font = Enum.Font.SourceSansSemibold
+NukeLauncher.Text = "Nuke Launcher"
+NukeLauncher.TextColor3 = Color3.new(1, 1, 1)
+NukeLauncher.TextSize = 19
+
+RavengerClaws.Name = "RavengerClaws"
+RavengerClaws.Parent = Main
+RavengerClaws.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+RavengerClaws.BorderSizePixel = 0
+RavengerClaws.Size = UDim2.new(1, 0, 0, 30)
+RavengerClaws.Font = Enum.Font.SourceSansSemibold
+RavengerClaws.Text = "Ravenger Claws"
+RavengerClaws.TextColor3 = Color3.new(1, 1, 1)
+RavengerClaws.TextSize = 19
+
+Demon.Name = "Demon"
+Demon.Parent = Main
+Demon.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Demon.BorderSizePixel = 0
+Demon.Size = UDim2.new(1, 0, 0, 30)
+Demon.Font = Enum.Font.SourceSansSemibold
+Demon.Text = "Demon"
+Demon.TextColor3 = Color3.new(1, 1, 1)
+Demon.TextSize = 19
+
+NoobGun.Name = "NoobGun"
+NoobGun.Parent = Main
+NoobGun.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+NoobGun.BorderSizePixel = 0
+NoobGun.Size = UDim2.new(1, 0, 0, 30)
+NoobGun.Font = Enum.Font.SourceSansSemibold
+NoobGun.Text = "Noob Gun"
+NoobGun.TextColor3 = Color3.new(1, 1, 1)
+NoobGun.TextSize = 19
+
+Pandora.Name = "Pandora"
+Pandora.Parent = Main
+Pandora.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Pandora.BorderSizePixel = 0
+Pandora.Size = UDim2.new(1, 0, 0, 30)
+Pandora.Font = Enum.Font.SourceSansSemibold
+Pandora.Text = "Pandora"
+Pandora.TextColor3 = Color3.new(1, 1, 1)
+Pandora.TextSize = 19
+
+GodSlayer.Name = "GodSlayer"
+GodSlayer.Parent = Main
+GodSlayer.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+GodSlayer.BorderSizePixel = 0
+GodSlayer.Size = UDim2.new(1, 0, 0, 30)
+GodSlayer.Font = Enum.Font.SourceSansSemibold
+GodSlayer.Text = "God Slayer"
+GodSlayer.TextColor3 = Color3.new(1, 1, 1)
+GodSlayer.TextSize = 19
+
+BloodyAngel.Name = "BloodyAngel"
+BloodyAngel.Parent = Main
+BloodyAngel.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+BloodyAngel.BorderSizePixel = 0
+BloodyAngel.Size = UDim2.new(1, 0, 0, 30)
+BloodyAngel.Font = Enum.Font.SourceSansSemibold
+BloodyAngel.Text = "Bloody Angel"
+BloodyAngel.TextColor3 = Color3.new(1, 1, 1)
+BloodyAngel.TextSize = 19
+
+StarGlitcher.Name = "StarGlitcher"
+StarGlitcher.Parent = Main
+StarGlitcher.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+StarGlitcher.BorderSizePixel = 0
+StarGlitcher.Size = UDim2.new(1, 0, 0, 30)
+StarGlitcher.Font = Enum.Font.SourceSansSemibold
+StarGlitcher.Text = "Star Glitcher"
+StarGlitcher.TextColor3 = Color3.new(1, 1, 1)
+StarGlitcher.TextSize = 19
+
+Genocider.Name = "Genocider"
+Genocider.Parent = Main
+Genocider.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Genocider.BorderSizePixel = 0
+Genocider.Size = UDim2.new(1, 0, 0, 30)
+Genocider.Font = Enum.Font.SourceSansSemibold
+Genocider.Text = "Genocider"
+Genocider.TextColor3 = Color3.new(1, 1, 1)
+Genocider.TextSize = 19
+
+Sadist.Name = "Sadist"
+Sadist.Parent = Main
+Sadist.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Sadist.BorderSizePixel = 0
+Sadist.Size = UDim2.new(1, 0, 0, 30)
+Sadist.Font = Enum.Font.SourceSansSemibold
+Sadist.Text = "Sadist"
+Sadist.TextColor3 = Color3.new(1, 1, 1)
+Sadist.TextSize = 19
+
+Banisher.Name = "Banisher"
+Banisher.Parent = Main
+Banisher.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Banisher.BorderSizePixel = 0
+Banisher.Size = UDim2.new(1, 0, 0, 30)
+Banisher.Font = Enum.Font.SourceSansSemibold
+Banisher.Text = "Banisher"
+Banisher.TextColor3 = Color3.new(1, 1, 1)
+Banisher.TextSize = 19
+
+NoobPowers.Name = "NoobPowers"
+NoobPowers.Parent = Main
+NoobPowers.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+NoobPowers.BorderSizePixel = 0
+NoobPowers.Size = UDim2.new(1, 0, 0, 30)
+NoobPowers.Font = Enum.Font.SourceSansSemibold
+NoobPowers.Text = "NoobPowers"
+NoobPowers.TextColor3 = Color3.new(1, 1, 1)
+NoobPowers.TextSize = 19
+
+NebulaAngel.Name = "NebulaAngel"
+NebulaAngel.Parent = Main
+NebulaAngel.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+NebulaAngel.BorderSizePixel = 0
+NebulaAngel.Size = UDim2.new(1, 0, 0, 30)
+NebulaAngel.Font = Enum.Font.SourceSansSemibold
+NebulaAngel.Text = "Nebula Angel"
+NebulaAngel.TextColor3 = Color3.new(1, 1, 1)
+NebulaAngel.TextSize = 19
+
+StellarPhoenix.Name = "StellarPhoenix"
+StellarPhoenix.Parent = Main
+StellarPhoenix.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+StellarPhoenix.BorderSizePixel = 0
+StellarPhoenix.Size = UDim2.new(1, 0, 0, 30)
+StellarPhoenix.Font = Enum.Font.SourceSansSemibold
+StellarPhoenix.Text = "Stellar Phoenix"
+StellarPhoenix.TextColor3 = Color3.new(1, 1, 1)
+StellarPhoenix.TextSize = 19
+
+Bloxwatch.Name = "Bloxwatch"
+Bloxwatch.Parent = Main
+Bloxwatch.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Bloxwatch.BorderSizePixel = 0
+Bloxwatch.Size = UDim2.new(1, 0, 0, 30)
+Bloxwatch.Font = Enum.Font.SourceSansSemibold
+Bloxwatch.Text = "Bloxwatch"
+Bloxwatch.TextColor3 = Color3.new(1, 1, 1)
+Bloxwatch.TextSize = 19
+
+ContentCop.Name = "ContentCop"
+ContentCop.Parent = Main
+ContentCop.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+ContentCop.BorderSizePixel = 0
+ContentCop.Size = UDim2.new(1, 0, 0, 30)
+ContentCop.Font = Enum.Font.SourceSansSemibold
+ContentCop.Text = "Content Cop"
+ContentCop.TextColor3 = Color3.new(1, 1, 1)
+ContentCop.TextSize = 19
+
+Sans.Name = "Sans"
+Sans.Parent = Main
+Sans.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Sans.BorderSizePixel = 0
+Sans.Size = UDim2.new(1, 0, 0, 30)
+Sans.Font = Enum.Font.SourceSansSemibold
+Sans.Text = "Sans"
+Sans.TextColor3 = Color3.new(1, 1, 1)
+Sans.TextSize = 19
+
+FrostGiant.Name = "Frost Giant"
+FrostGiant.Parent = Main
+FrostGiant.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+FrostGiant.BorderSizePixel = 0
+FrostGiant.Size = UDim2.new(1, 0, 0, 30)
+FrostGiant.Font = Enum.Font.SourceSansSemibold
+FrostGiant.Text = "Frost Giant"
+FrostGiant.TextColor3 = Color3.new(1, 1, 1)
+FrostGiant.TextSize = 19
+
+Infamous.Name = "Infamous"
+Infamous.Parent = Main
+Infamous.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Infamous.BorderSizePixel = 0
+Infamous.Size = UDim2.new(1, 0, 0, 30)
+Infamous.Font = Enum.Font.SourceSansSemibold
+Infamous.Text = "Infamous"
+Infamous.TextColor3 = Color3.new(1, 1, 1)
+Infamous.TextSize = 19
+
+HackerSword.Name = "HackerSword"
+HackerSword.Parent = Main
+HackerSword.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+HackerSword.BorderSizePixel = 0
+HackerSword.Size = UDim2.new(1, 0, 0, 30)
+HackerSword.Font = Enum.Font.SourceSansSemibold
+HackerSword.Text = "Hacker Sword"
+HackerSword.TextColor3 = Color3.new(1, 1, 1)
+HackerSword.TextSize = 19
+
+DominusKing.Name = "DominusKing"
+DominusKing.Parent = Main
+DominusKing.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+DominusKing.BorderSizePixel = 0
+DominusKing.Size = UDim2.new(1, 0, 0, 30)
+DominusKing.Font = Enum.Font.SourceSansSemibold
+DominusKing.Text = "Dominus King"
+DominusKing.TextColor3 = Color3.new(1, 1, 1)
+DominusKing.TextSize = 19
+
+Lustris.Name = "Lustris"
+Lustris.Parent = Main
+Lustris.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Lustris.BorderSizePixel = 0
+Lustris.Size = UDim2.new(1, 0, 0, 30)
+Lustris.Font = Enum.Font.SourceSansSemibold
+Lustris.Text = "Lustris"
+Lustris.TextColor3 = Color3.new(1, 1, 1)
+Lustris.TextSize = 19
+
+Laxus.Name = "Laxus"
+Laxus.Parent = Main
+Laxus.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Laxus.BorderSizePixel = 0
+Laxus.Size = UDim2.new(1, 0, 0, 30)
+Laxus.Font = Enum.Font.SourceSansSemibold
+Laxus.Text = "Laxus"
+Laxus.TextColor3 = Color3.new(1, 1, 1)
+Laxus.TextSize = 19
+
+NebulaStaff.Name = "NebulaStaff"
+NebulaStaff.Parent = Main
+NebulaStaff.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+NebulaStaff.BorderSizePixel = 0
+NebulaStaff.Size = UDim2.new(1, 0, 0, 30)
+NebulaStaff.Font = Enum.Font.SourceSansSemibold
+NebulaStaff.Text = "Nebula Staff"
+NebulaStaff.TextColor3 = Color3.new(1, 1, 1)
+NebulaStaff.TextSize = 19
+
+Hackerman.Name = "Hackerman"
+Hackerman.Parent = Main
+Hackerman.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Hackerman.BorderSizePixel = 0
+Hackerman.Size = UDim2.new(1, 0, 0, 30)
+Hackerman.Font = Enum.Font.SourceSansSemibold
+Hackerman.Text = "Hackerman"
+Hackerman.TextColor3 = Color3.new(1, 1, 1)
+Hackerman.TextSize = 19
+
+ShadowTitan.Name = "ShadowTitan"
+ShadowTitan.Parent = Main
+ShadowTitan.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+ShadowTitan.BorderSizePixel = 0
+ShadowTitan.Size = UDim2.new(1, 0, 0, 30)
+ShadowTitan.Font = Enum.Font.SourceSansSemibold
+ShadowTitan.Text = "Shadow Titan"
+ShadowTitan.TextColor3 = Color3.new(1, 1, 1)
+ShadowTitan.TextSize = 19
+
+GodArc.Name = "GodArc"
+GodArc.Parent = Main
+GodArc.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+GodArc.BorderSizePixel = 0
+GodArc.Size = UDim2.new(1, 0, 0, 30)
+GodArc.Font = Enum.Font.SourceSansSemibold
+GodArc.Text = "God Arc"
+GodArc.TextColor3 = Color3.new(1, 1, 1)
+GodArc.TextSize = 19
+
+SearingPandora.Name = "SearingPandora"
+SearingPandora.Parent = Main
+SearingPandora.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+SearingPandora.BorderSizePixel = 0
+SearingPandora.Size = UDim2.new(1, 0, 0, 30)
+SearingPandora.Font = Enum.Font.SourceSansSemibold
+SearingPandora.Text = "Searing Pandora"
+SearingPandora.TextColor3 = Color3.new(1, 1, 1)
+SearingPandora.TextSize = 19
+
+FalseGod.Name = "FalseGod"
+FalseGod.Parent = Main
+FalseGod.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+FalseGod.BorderSizePixel = 0
+FalseGod.Size = UDim2.new(1, 0, 0, 30)
+FalseGod.Font = Enum.Font.SourceSansSemibold
+FalseGod.Text = "False God"
+FalseGod.TextColor3 = Color3.new(1, 1, 1)
+FalseGod.TextSize = 19
+
+InternalWar.Name = "InternalWar"
+InternalWar.Parent = Main
+InternalWar.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+InternalWar.BorderSizePixel = 0
+InternalWar.Size = UDim2.new(1, 0, 0, 30)
+InternalWar.Font = Enum.Font.SourceSansSemibold
+InternalWar.Text = "Internal War"
+InternalWar.TextColor3 = Color3.new(1, 1, 1)
+InternalWar.TextSize = 19
+
+MasterOfNukes.Name = "MasterOfNukes"
+MasterOfNukes.Parent = Main
+MasterOfNukes.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+MasterOfNukes.BorderSizePixel = 0
+MasterOfNukes.Size = UDim2.new(1, 0, 0, 30)
+MasterOfNukes.Font = Enum.Font.SourceSansSemibold
+MasterOfNukes.Text = "Master Of Nukes"
+MasterOfNukes.TextColor3 = Color3.new(1, 1, 1)
+MasterOfNukes.TextSize = 19
+
+ObamaIsGone.Name = "ObamaIsGone"
+ObamaIsGone.Parent = Main
+ObamaIsGone.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+ObamaIsGone.BorderSizePixel = 0
+ObamaIsGone.Size = UDim2.new(1, 0, 0, 30)
+ObamaIsGone.Font = Enum.Font.SourceSansSemibold
+ObamaIsGone.Text = "Obama Is Gone"
+ObamaIsGone.TextColor3 = Color3.new(1, 1, 1)
+ObamaIsGone.TextSize = 19
+
+Flamingo.Name = "Flamingo"
+Flamingo.Parent = Main
+Flamingo.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Flamingo.BorderSizePixel = 0
+Flamingo.Size = UDim2.new(1, 0, 0, 30)
+Flamingo.Font = Enum.Font.SourceSansSemibold
+Flamingo.Text = "Flamingo"
+Flamingo.TextColor3 = Color3.new(1, 1, 1)
+Flamingo.TextSize = 19
+
+TopLabel.Name = "TopLabel"
+TopLabel.Parent = One
+TopLabel.Active = true
+TopLabel.BackgroundColor3 = Color3.new(0.109804, 0.109804, 0.109804)
+TopLabel.BorderColor3 = Color3.new(0.109804, 0.109804, 0.109804)
+TopLabel.Size = UDim2.new(1, 0, 0, 40)
+TopLabel.Font = Enum.Font.SourceSansSemibold
+TopLabel.Text = "Athena - SS UI"
+TopLabel.TextColor3 = Color3.new(1, 1, 1)
+TopLabel.TextSize = 16
+
+SSSpacito.Name = "SSSpacito"
+SSSpacito.Parent = TopLabel
+SSSpacito.BackgroundColor3 = Color3.new(1, 1, 1)
+SSSpacito.BackgroundTransparency = 0.94999998807907
+SSSpacito.Position = UDim2.new(0, 25, 0, 5)
+SSSpacito.Size = UDim2.new(0, 125, 0, 25)
+SSSpacito.Font = Enum.Font.SourceSans
+SSSpacito.Text = "Open SS Executor"
+SSSpacito.TextColor3 = Color3.new(1, 1, 1)
+SSSpacito.TextSize = 14
+
+Chilli_Killi_yourself.Name = "Chilli_Killi_yourself"
+Chilli_Killi_yourself.Parent = TopLabel
+Chilli_Killi_yourself.BackgroundColor3 = Color3.new(1, 1, 1)
+Chilli_Killi_yourself.BackgroundTransparency = 1
+Chilli_Killi_yourself.Position = UDim2.new(1, -25, 0, 5)
+Chilli_Killi_yourself.Size = UDim2.new(0, 25, 0, 25)
+Chilli_Killi_yourself.Font = Enum.Font.SourceSans
+Chilli_Killi_yourself.Text = "X"
+Chilli_Killi_yourself.TextColor3 = Color3.new(1, 1, 1)
+Chilli_Killi_yourself.TextSize = 14
+-- Scripts:
+
+
+-- Scripts:
+
+Chilli_Killi_yourself.MouseButton1Click:connect(function()
+AthenaSSUI:Destroy()
+end)
+
+SSSpacito.MouseButton1Click:connect(function()
+loadstring(geturl("http://tacticalbfg.com/Athena/african_soup.lua"))()
+end)
+
+for i,v in pairs(Main:GetChildren()) do
+	if v.ClassName == "TextButton" then
+		v.MouseButton1Click:connect(function()
+			SS[v.Name]()
+		end)
+	end
+end

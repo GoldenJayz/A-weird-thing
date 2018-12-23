@@ -1,0 +1,204 @@
+-- Farewell Infortality.
+-- Version: 2.82
+-- Instances:
+local jef = Instance.new("ScreenGui")
+local ok = Instance.new("TextButton")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local example = Instance.new("TextButton")
+local close = Instance.new("TextButton")
+local size = Instance.new("TextButton")
+local right = Instance.new("TextButton")
+local something = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+--Properties:
+jef.Name = "jef"
+jef.Parent = game.CoreGui
+
+ok.Name = "ok"
+ok.Parent = jef
+ok.BackgroundColor3 = Color3.new(0, 0, 0)
+ok.BackgroundTransparency = 0.40000000596046
+ok.BorderSizePixel = 0
+ok.Draggable = true
+ok.Position = UDim2.new(0.5, -200, 0.5, -200)
+ok.Size = UDim2.new(0, 400, 0, 25)
+ok.Font = Enum.Font.SourceSans
+ok.Text = "   Athena Explorer"
+ok.TextColor3 = Color3.new(1, 1, 1)
+ok.TextSize = 14
+ok.TextXAlignment = Enum.TextXAlignment.Left
+
+ScrollingFrame.Parent = ok
+ScrollingFrame.BackgroundColor3 = Color3.new(0, 0, 0)
+ScrollingFrame.BackgroundTransparency = 0.5
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0, 0, 0, 25)
+ScrollingFrame.Size = UDim2.new(0, 400, 0, 250)
+ScrollingFrame.CanvasSize = UDim2.new(0, 0, 30, 25)
+
+UIListLayout.Parent = ScrollingFrame
+
+example.Name = "example"
+example.Parent = ScrollingFrame
+example.BackgroundColor3 = Color3.new(0, 0, 0)
+example.BackgroundTransparency = 0.80000001192093
+example.Size = UDim2.new(1, 0, 0, 25)
+example.Font = Enum.Font.SourceSans
+example.Text = "Game"
+example.TextColor3 = Color3.new(1, 1, 1)
+example.TextSize = 14
+example.TextXAlignment = Enum.TextXAlignment.Left
+
+close.Name = "close"
+close.Parent = ok
+close.BackgroundColor3 = Color3.new(1, 1, 1)
+close.BackgroundTransparency = 1
+close.Position = UDim2.new(1, -25, 0, 0)
+close.Size = UDim2.new(0, 25, 0, 25)
+close.Font = Enum.Font.SourceSans
+close.Text = "X"
+close.TextColor3 = Color3.new(0.882353, 0, 0.0117647)
+close.TextScaled = true
+close.TextSize = 14
+close.TextWrapped = true
+
+size.Name = "size"
+size.Parent = ok
+size.BackgroundColor3 = Color3.new(1, 1, 1)
+size.BackgroundTransparency = 1
+size.Position = UDim2.new(1, -50, 0, 0)
+size.Size = UDim2.new(0, 25, 0, 25)
+size.Font = Enum.Font.SourceSans
+size.Text = "[ ]"
+size.TextColor3 = Color3.new(1, 1, 1)
+size.TextScaled = true
+size.TextSize = 14
+size.TextWrapped = true
+
+right.Name = "right"
+right.Parent = ok
+right.BackgroundColor3 = Color3.new(1, 1, 1)
+right.BackgroundTransparency = 1
+right.Position = UDim2.new(1, -75, 0, 0)
+right.Size = UDim2.new(0, 25, 0, 25)
+right.Font = Enum.Font.SourceSans
+right.Text = "]"
+right.TextColor3 = Color3.new(1, 1, 1)
+right.TextScaled = true
+right.TextSize = 14
+right.TextWrapped = true
+
+something.Name = "something"
+something.Parent = jef
+something.BackgroundColor3 = Color3.new(0, 0, 0)
+something.BackgroundTransparency = 0.60000002384186
+something.Size = UDim2.new(0, 200, 0, 50)
+something.Visible = false
+something.ZIndex = 4
+
+TextButton.Parent = something
+TextButton.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton.BackgroundTransparency = 0.5
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0, 0, 0, 1)
+TextButton.Size = UDim2.new(0, 200, 0, 23)
+TextButton.ZIndex = 5
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "   Give"
+TextButton.TextScaled = true
+TextButton.TextSize = 14
+TextButton.TextWrapped = true
+TextButton.TextXAlignment = Enum.TextXAlignment.Left
+
+TextButton_2.Parent = something
+TextButton_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TextButton_2.BackgroundTransparency = 0.5
+TextButton_2.BorderSizePixel = 0
+TextButton_2.Position = UDim2.new(0, 0, 0, 26)
+TextButton_2.Size = UDim2.new(0, 200, 0, 23)
+TextButton_2.ZIndex = 5
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "   Destroy"
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14
+TextButton_2.TextWrapped = true
+TextButton_2.TextXAlignment = Enum.TextXAlignment.Left
+-- Scripts:
+
+local cached_instances = {}
+
+sizef = 1 -- 1: small; 2: big
+size.MouseButton1Click:connect(function()
+	if sizef == 1 then
+		ok:TweenSizeAndPosition(UDim2.new(0,600,0,25), UDim2.new(0.5,-300,0,0))
+ok.ScrollingFrame:TweenSizeAndPosition(UDim2.new(0,600,0,ok.Parent.AbsoluteSize.Y-125), UDim2.new(0,0,0,25))
+sizef = 2
+	else
+		ok:TweenSizeAndPosition(UDim2.new(0,400,0,25), UDim2.new(0.5,-200,0,0))
+ok.ScrollingFrame:TweenSizeAndPosition(UDim2.new(0,400,0,250), UDim2.new(0,0,0,25))
+sizef = 1
+	end
+end)
+
+right.MouseButton1Click:connect(function()
+ok:TweenSizeAndPosition(UDim2.new(0,300,0,25), UDim2.new(1,-300,0,0))
+ok.ScrollingFrame:TweenSizeAndPosition(UDim2.new(0,300,0,ok.Parent.AbsoluteSize.Y-25), UDim2.new(0,0,0,25))
+end)
+
+close.MouseButton1Click:connect(function()
+jef:Destroy()
+end)
+
+local cached_children = {}
+
+function addChildData(parent, child, i)
+	local jefspacito = example:Clone()
+	jefspacito:ClearAllChildren()
+	jefspacito.Parent = parent
+	jefspacito.Position = UDim2.new(0,25,i+6,0)
+	jefspacito.Text = child.Name.." ("..child.ClassName..")"
+	jefspacito.Name = child.Name
+	ScrollingFrame.CanvasSize = UDim2.new(0, 0, 30, 25+(i*25/2))
+	if child.ClassName == "RemoteEvent" or child.ClassName == "RemoteFunction" then
+		jefspacito.BackgroundColor3 = Color3.new(100,0,0)
+	end
+	--table.insert(cached_instances, child.Name)
+end
+
+function addAndCacheChildren(parent, instparent)
+for i,v in pairs(instparent:GetChildren()) do
+addChildData(parent, v, i)
+end
+end
+
+
+
+function addGameChild(parent, child, i)
+	local jefspacito = example:Clone()
+	jefspacito:ClearAllChildren()
+	jefspacito.Parent = parent
+	jefspacito.Position = UDim2.new(0,25,i,0)
+	jefspacito.Text = child.Name
+	jefspacito.Name = child.Name
+	
+	jefspacito.MouseButton1Click:connect(function()
+	
+	for i,v in pairs(jefspacito.Parent:GetChildren()) do
+	for b,ass in pairs(v:GetChildren()) do
+	ass:Destroy() -- ur mom
+	end
+	end
+	addAndCacheChildren(jefspacito, child)
+	
+	end)
+end
+
+
+addGameChild(example, workspace, 1)
+addGameChild(example, game.Players, 2)
+addGameChild(example, game.ReplicatedStorage, 3)
+addGameChild(example, game.ReplicatedFirst, 4)
+addGameChild(example, game.StarterGui, 5)
+addGameChild(example, game.StarterPack, 6)

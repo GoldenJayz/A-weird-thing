@@ -15,7 +15,7 @@ Clientdiscord = discord.Client()
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='Alteria V4.9.8', type = 3))
+    await client.change_presence(game=Game(name='Alteria Update coming soon!', type = 3))
     print('Loading AlteriaALPHA V3.1.2, ... Loaded Successfully.') 
 
 @client.event
@@ -31,7 +31,7 @@ async def on_message(message):
     if message.content == '-mlg':
         await client.send_message(message.channel,'https://cdn.discordapp.com/attachments/460117183520047115/499031279250046976/NORMIES_LEAVE_REEE.mp4')
     if message.content == '-commands':
-        em = discord.Embed(description='`Here is a list of commands. Fart, deported, slap, gold, invite, kiss, missletoe, marry, fart, dump, poop` **More is coming soon**')
+        em = discord.Embed(description='**Here is a list of commands. Fart, deported, slap, gold, invite, kiss, missletoe, marry, fart, poop, christmas, bomb, server, menu, shoot, stats**')
         await client.send_message(message.channel, embed=em)
     if message.content == '-sadmusic':
         await client.send_message(message.channel,'https://www.youtube.com/watch?v=eXDU9um19HM')
@@ -103,10 +103,6 @@ async def on_message(message):
         await client.send_message(message.channel, embed=em)
     if message.content == '-server':
         await client.send_message(message.channel,'**Here is the Invite ://discord.gg/qk9uVwJ If you join this server, you can get access to AlteriaVIP for FREE!')
-    if message.content == '`dump':
-        em = discord.Embed(description='You have clogged the toilet! Say *unclog to unclog the toilet')
-        em.set_image(url='https://media.giphy.com/media/3og0IJtAkb80B96jF6/giphy.gif')
-        await client.send_message(message.channel, embed=em)
     if message.content == '-unclog':
         em = discord.Embed(description='You unclogged the toilet!')
         em.set_image(url='https://media.giphy.com/media/5Zuiy7XPMH21O/giphy.gif')
@@ -141,7 +137,7 @@ async def on_message(message):
         await client.send_message(message.channel,'Alteria originaly was named "AlteriaALPHA". And, since Gold was new to coding and didnt even host his bot 24/7. He used github. AND PASTED HIS BOTS TOKEN. So somebody stole my bots token and destroyed everyone of my friends Discord servers and mine. (This is a screenshot https://cdn.discordapp.com/attachments/516304668528214016/516370555260370945/image0.png) But after that. I still had a old file of Alteria and added insane protection to Alteria so nobody can touch it. That bots name was called AlteriaREWRITE.')
     if message.content == '-alteria':
         await client.send_message(message.channel,'Alteria originaly was named "AlteriaALPHA". And, since Gold was new to coding and didnt even host his bot 24/7. He used github. AND PASTED HIS BOTS TOKEN. So somebody stole my bots token and destroyed everyone of my friends Discord servers and mine. (This is a screenshot https://cdn.discordapp.com/attachments/516304668528214016/516370555260370945/image0.png) But after that. I still had a old file of Alteria and added insane protection to Alteria so nobody can touch it. That bots name was called AlteriaREWRITE.')
-    if message.content.startswith('`missletoe'):
+    if message.content.startswith('-missletoe'):
         randomlist = ['You Walked under a missletoe and got kissed','Nobody saw you walk under the missletoe',]
         await client.send_message(message.channel,(random.choice(randomlist)))
     if message.content.startswith('-poop'):
@@ -154,6 +150,14 @@ async def on_message(message):
     if message.content == ('-stats'):
         await client.send_message(message.channel,'`This bot is running on Microsoft windows 64x bit. Shard: 1/1`')
     if message.content == ('-upload'):
-        await client.send_message(message.channel,'**@everyone Hello, Gold just uploaded a Youtube Video about Alteria. Go check it out--->https://www.youtube.com/channel/UCR6r5mq-pD3201_CBY-YeLA?view_as=subscriber**')
+        await client.send_message(message.channel,'** @everyone Hello, Gold just uploaded a Youtube Video about Alteria. Go check it out--->https://www.youtube.com/channel/UCR6r5mq-pD3201_CBY-YeLA?view_as=subscriber**')   
+    if message.content == '-christmas':
+        em = discord.Embed(description='Merry Christmas!')
+        em.set_image(url='https://media.giphy.com/media/3o6ZsS7qkBvNtjIzPG/giphy.gif')
+        await client.send_message(message.channel, embed=em)
+    if message.content == '-bomb':
+        em = discord.Embed(description='You bombed the channel!')
+        em.set_image(url='https://media.giphy.com/media/X92pmIty2ZJp6/giphy.gif')
+        await client.send_message(message.channel, embed=em)
 client.run(str(os.environ.get('BOT_TOKEN')))
 

@@ -15,7 +15,7 @@ Clientdiscord = discord.Client()
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='^3^ V5', type = 3))
+    await client.change_presence(game=Game(name='Its back V6', type = 3))
     print('Loading AlteriaALPHA V3.1.2, ... Loaded Successfully.') 
 
 @client.event
@@ -148,7 +148,7 @@ async def on_message(message):
         em.set_image(url='https://media.giphy.com/media/3o7TKRBB3E7IdVNLm8/giphy.gif')
         await client.send_message(message.channel, embed=em)
     if message.content == ('-stats'):
-        await client.send_message(message.channel,'`This bot is running on Microsoft windows 64x bit. Shard: 1/1`')
+        await client.send_message(message.channel,'`This bot is running on Microsoft windows 64x bit. Shard: 1/2`')
     if message.content == ('-upload'):
         await client.send_message(message.channel,'** @everyone Hello, Gold just uploaded a Youtube Video about Alteria. Go check it out--->https://www.youtube.com/channel/UCR6r5mq-pD3201_CBY-YeLA?view_as=subscriber**')   
     if message.content == '-christmas':
@@ -158,6 +158,6 @@ async def on_message(message):
     if message.content == '-bomb':
         em = discord.Embed(description='You bombed the channel!')
         em.set_image(url='https://media.giphy.com/media/X92pmIty2ZJp6/giphy.gif')
-        await client.send_message(message.channel, embed=em)
+        await client.send_message(message.channel, embed=em)   
 client.run(str(os.environ.get('BOT_TOKEN')))
 

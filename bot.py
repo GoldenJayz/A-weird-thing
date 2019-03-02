@@ -17,11 +17,6 @@ Clientdiscord = discord.Client()
 async def on_ready():
     await client.change_presence(game=Game(name='Testing Bot', type = 3))
     print('Loading AlteriaALPHA V3.1.2, ... Loaded Successfully.')
-
-@client.event
-async def on_member_join(member):
-    role = discord.utils.get(member.server.roles, name ='Owner')
-    await client.add_roles(member, role)
     
 @client.event
 async def on_message(message):

@@ -47,22 +47,6 @@ async def on_message(message):
         await client.send_message(message.channel,'Hi!')
     if message.content == 'yo':
         await client.send_message(message.channel,'Hi!')
-    if message.content == 'fuck':
-        await client.send_message(message.channel,'Do not swear on my christian Minecraft server')
-    if message.content == 'shit':
-        await client.send_message(message.channel,'Do not swear on my christian Minecraft server')
-    if message.content == 'heck':
-        await client.send_message(message.channel,'Do not swear on my christian Minecraft server')
-    if message.content == 'penis':
-        await client.send_message(message.channel,'Do not swear on my christian Minecraft server')
-    if message.content == 'dick':
-        await client.send_message(message.channel,'Do not swear on my christian Minecraft server')
-    if message.content == 'pussy':
-        await client.send_message(message.channel,'Do not swear on my christian Minecraft server')
-    if message.content == 'nigger':
-        await client.send_message(message.channel,'What up my home boi.')
-    if message.content == 'baby shark':
-        await client.send_message(message.channel,'FUCK NO')
     if message.content == 'gold':
         await client.send_message(message.channel,'Gold doesnt want to talk to you.')
     if message.content == '-invite':
@@ -71,28 +55,10 @@ async def on_message(message):
         em = discord.Embed(description='You got slapped sike')
         em.set_image(url='https://i.giphy.com/media/mEtSQlxqBtWWA/giphy.gif')
         await client.send_message(message.channel, embed=em)
-    if ('bitch') in message.content:
-       await client.delete_message(message)
-    if ('fuck') in message.content:
-       await client.delete_message(message)
-    if ('nigger') in message.content:
-       await client.delete_message(message)
-    if ('pussy') in message.content:
-       await client.delete_message(message)
-    if ('dick') in message.content:
-       await client.delete_message(message)
-    if message.content == 'shit':
-        await client.send_message(message.channel,'Do not swear on my christian Minecraft server')
     if message.content == '-marry':
         em = discord.Embed(description='You have been married!')
         em.set_image(url='https://media.giphy.com/media/1x3LVhXaUdISA/giphy.gif')
         await client.send_message(message.channel, embed=em)
-    if ('nigga') in message.content:
-       await client.delete_message(message)
-    if ('cock') in message.content:
-       await client.delete_message(message)
-    if ('cunt') in message.content:
-       await client.delete_message(message)
     if message.content == '-kiss':
         em = discord.Embed(description='You kissed. EWWWWW')
         em.set_image(url='https://media.giphy.com/media/l2Je2M4Nfrit0L7sQ/giphy.gif')
@@ -103,9 +69,6 @@ async def on_message(message):
         await client.send_message(message.channel, embed=em)
     if message.content == '-server':
         await client.send_message(message.channel,'**Here is the Invite ://discord.gg/qk9uVwJ If you join this server, you can get access to AlteriaVIP for FREE!')
-    if message.content == '-unclog':
-        em = discord.Embed(description='You unclogged the toilet!')
-        em.set_image(url='https://media.giphy.com/media/5Zuiy7XPMH21O/giphy.gif')
         await client.send_message(message.channel, embed=em)
     if message.content.startswith('-8ball'):
         randomlist = ['Maybe','Yes','No',]
@@ -140,13 +103,6 @@ async def on_message(message):
     if message.content.startswith('-missletoe'):
         randomlist = ['You Walked under a missletoe and got kissed','Nobody saw you walk under the missletoe',]
         await client.send_message(message.channel,(random.choice(randomlist)))
-    if message.content.startswith('-poop'):
-        randomlist = ['You have clogged the toilet. Type -unclog to unclog it','You have pooped!',]
-        await client.send_message(message.channel,(random.choice(randomlist)))
-    if message.content == ('-poop'):
-        em = discord.Embed(description='')
-        em.set_image(url='https://media.giphy.com/media/3o7TKRBB3E7IdVNLm8/giphy.gif')
-        await client.send_message(message.channel, embed=em)
     if message.content == ('-stats'):
         await client.send_message(message.channel,'`This bot is running on Microsoft windows 64x bit. Shard: 1/2`')
     if message.content == ('-upload'):

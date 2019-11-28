@@ -16,7 +16,7 @@ Clientdiscord = discord.Client()
 @client.event
 async def on_ready():
     await client.change_presence(game=Game(name='Beta Testing Version 8 :)', type = 3))
-    print('Loading AlteriaALPHA V3.1.2, ... Loaded Successfully.')
+    print('Loading AlexisALPHA V3.1.2, ... Loaded Successfully.')
     
 @client.event
 async def on_message(message):
@@ -96,10 +96,10 @@ async def on_message(message):
         await client.send_message(message.channel,'*Gives*')
     if message.content == '-about':
         await client.send_message(message.channel,'A little about Gold. Well Gold is the owner of this bot. He is a die hard Pokemon fan (It may sound childish but its amazing). Gold also, likes Zelda and has completed all Zelda and Pokemon games. Gold has caught them all in Pokemon Omega Ruby. Golds favorite Pokemon game is Pokemon Heartgold (Thats how I got my username LMAO). Gold Originated from Roblox as the user "jayboss980". He was a stupid kid then. But soon later he quit and started getting intrested in coding and created his first bot "Jays Assistant". This bot was absolute CRAP. It could only do 4 commands and those 4 commands are in this bot. (BUT THERE HIDDEN so dont even try).')
-    if message.content == '-Alteria':
-        await client.send_message(message.channel,'Alteria originaly was named "AlteriaALPHA". And, since Gold was new to coding and didnt even host his bot 24/7. He used github. AND PASTED HIS BOTS TOKEN. So somebody stole my bots token and destroyed everyone of my friends Discord servers and mine. (This is a screenshot https://cdn.discordapp.com/attachments/516304668528214016/516370555260370945/image0.png) But after that. I still had a old file of Alteria and added insane protection to Alteria so nobody can touch it. That bots name was called AlteriaREWRITE.')
-    if message.content == '-alteria':
-        await client.send_message(message.channel,'Alteria originaly was named "AlteriaALPHA". And, since Gold was new to coding and didnt even host his bot 24/7. He used github. AND PASTED HIS BOTS TOKEN. So somebody stole my bots token and destroyed everyone of my friends Discord servers and mine. (This is a screenshot https://cdn.discordapp.com/attachments/516304668528214016/516370555260370945/image0.png) But after that. I still had a old file of Alteria and added insane protection to Alteria so nobody can touch it. That bots name was called AlteriaREWRITE.')
+    if message.content == '-Alexis':
+        await client.send_message(message.channel,'Alexis originaly was named "AlteriaALPHA". And, since I was new to coding and didnt even host his bot 24/7.\n He used github. AND PASTED HIS BOTS TOKEN. So somebody stole my bots token and destroyed everyone of my friends Discord servers and mine. (This is a screenshot https://cdn.discordapp.com/attachments/516304668528214016/516370555260370945/image0.png) But after that. I still had a old file of Alteria and added insane protection to Alteria so nobody can touch it. That bots name was called AlteriaREWRITE.')
+    if message.content == '-alexis':
+        await client.send_message(message.channel,'Alexis originaly was named "AlteriaALPHA". And, since I was new to coding and didnt even host his bot 24/7.\n He used github. AND PASTED HIS BOTS TOKEN. So somebody stole my bots token and destroyed everyone of my friends Discord servers and mine. (This is a screenshot https://cdn.discordapp.com/attachments/516304668528214016/516370555260370945/image0.png) But after that. I still had a old file of Alteria and added insane protection to Alteria so nobody can touch it. That bots name was called AlteriaREWRITE.')
     if message.content.startswith('-missletoe'):
         randomlist = ['You Walked under a missletoe and got kissed','Nobody saw you walk under the missletoe',]
         await client.send_message(message.channel,(random.choice(randomlist)))

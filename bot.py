@@ -118,7 +118,5 @@ async def on_message(message):
         em = discord.Embed(description='You bombed the channel!')
         em.set_image(url='https://media.giphy.com/media/X92pmIty2ZJp6/giphy.gif')
         await client.send_message(message.channel, embed=em)  
-    if message.content == '-testdm':
-        await self.send_message(Server.get_member_named("Jaden#3147"), 'test')
 client.run(str(os.environ.get('BOT_TOKEN')))
 

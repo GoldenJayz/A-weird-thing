@@ -15,7 +15,7 @@ Clientdiscord = discord.Client()
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='Happy Thanksgiving! Version 9', type = 2))
+    await client.change_presence(game=Game(name='Project Alexis V10', type = 3))
     print('Loading AlexisALPHA V3.1.2, ... Loaded Successfully.')
     
 @client.event

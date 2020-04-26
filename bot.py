@@ -1,122 +1,244 @@
 import discord
 from discord.ext.commands import Bot
-from discord.ext import commands
 import asyncio
 import time
 import random
 from discord import Game
 import os
+import json
+from discord.ext import commands
 
 
-Client = discord.client
+
+
+
+client = discord.Client()
 client = commands.Bot(command_prefix = '-')
-Clientdiscord = discord.Client()
 
+
+#Startup
 
 @client.event
 async def on_ready():
-    await client.change_presence(game=Game(name='Project Alexis V10', type = 3))
-    print('Loading AlexisALPHA V3.1.2, ... Loaded Successfully.')
-    
+    await client.change_presence(activity=discord.Game('Type -commands for commands!'), status=discord.Status.online)
+    print('We have logged in as {0.user}'.format(client))
+
+
+#Level System(Broken)
+
+
+@client.event
+async def on_member_join(member):
+    with open('users.json', 'r') as f:
+        users = json.load(f)
+
+    await update_data(users, member)
+
+
+    with open('users.json', 'w') as f:
+        json.dump(users, f)
+
 @client.event
 async def on_message(message):
-    if message.content == '-bugcall':
-        await client.send_message(message.channel,'DM has been sent to the owner of this bot.')
-    if message.content == '-creator':
-        await client.send_message(message.channel,'The creators name is Jay or his other name is Gold.')
-    if message.content.startswith('-tag'):
-        await client.send_message(message.channel,'Your it! <@%s>'  %(message.author.id))
-    if message.content == '-meme':
-        await client.send_message(message.channel,'https://cdn.discordapp.com/attachments/277196107279237120/484473935354920970/567ilop.mov')
-    if message.content == '-mlg':
-        await client.send_message(message.channel,'https://cdn.discordapp.com/attachments/460117183520047115/499031279250046976/NORMIES_LEAVE_REEE.mp4')
-    if message.content == '-commands':
-        em = discord.Embed(description='**Here is a list of commands. Fart, deported, slap, gold, invite, kiss, missletoe, marry, fart, poop, christmas, bomb, server, menu, shoot, stats**')
-        await client.send_message(message.channel, embed=em)
-    if message.content == '-sadmusic':
-        await client.send_message(message.channel,'https://www.youtube.com/watch?v=eXDU9um19HM')
-    if message.content == '-fortnitemusic':
-        await client.send_message(message.channel,'https://www.youtube.com/watch?v=jAMik-1DGKY')
-    if message.content == '-pumpernickel':
-        await client.send_message(message.channel,'https://www.youtube.com/watch?v=ngFEQZwV3HA&t=1598s')
-    if message.content == '-deported':
-        await client.send_message(message.channel,'https://www.youtube.com/watch?v=P1-uCWIjZWM&index=20&list=PL_gap6ACbie81lL4scX1o73lY2tQP8DLD')
-    if message.content == 'Hi':
-        await client.send_message(message.channel,'Hi!')
-    if message.content == 'hi':
-        await client.send_message(message.channel,'Hi!')
-    if message.content == 'yo':
-        await client.send_message(message.channel,'Hi!')
-    if message.content == 'gold':
-        await client.send_message(message.channel,'Gold doesnt want to talk to you.')
-    if message.content == '-invite':
-        await client.send_message(message.channel,'https://discordapp.com/oauth2/authorize?&client_id=498889046370680863&scope=bot&permissions=8')
-    if message.content == '-slap':
-        em = discord.Embed(description='You got slapped sike')
-        em.set_image(url='https://i.giphy.com/media/mEtSQlxqBtWWA/giphy.gif')
-        await client.send_message(message.channel, embed=em)
-    if message.content == '-marry':
-        em = discord.Embed(description='You have been married!')
-        em.set_image(url='https://media.giphy.com/media/1x3LVhXaUdISA/giphy.gif')
-        await client.send_message(message.channel, embed=em)
-    if message.content == '-kiss':
-        em = discord.Embed(description='You kissed. EWWWWW')
-        em.set_image(url='https://media.giphy.com/media/l2Je2M4Nfrit0L7sQ/giphy.gif')
-        await client.send_message(message.channel, embed=em)
-    if message.content == '-fart':
-        em = discord.Embed(description='You farted, the whole channel smells like ur bacon from last night.')
-        em.set_image(url='https://media.giphy.com/media/cTfuWJAEYFyz6/giphy.gif')
-        await client.send_message(message.channel, embed=em)
-    if message.content == '-server':
-        await client.send_message(message.channel,'**Here is the Invite ://discord.gg/qk9uVwJ If you join this server, you can get access to AlteriaVIP for FREE!')
-        await client.send_message(message.channel, embed=em)
+    with open('users.json', 'r') as f:
+        users = json.load(f)
+
+    await update_data(users, message.author)
+    await add_experience(users, message.author, 5)
+    await level_up(users, message.author, message.channel)
+
+    with open('users.json', 'w') as f:
+        json.dump(users, f)
+
+async def update_data(users, user):
+    if not user.id in users:
+        users[user.id] = {}
+        users[user.id]['experience'] = 0
+        users[user.id]['level'] = 1
+
+async def add_experience(users, user, exp):
+    users[user.id]['experience'] += exp
+
+async def level_up(users, user, channel):
+    experience = users[user.id]['experience']
+    lvl_start = users[user.id]['level']
+    lvl_end = int (experience ** (1/4))
+
+    if lvl_start < lvl_end:
+        await client.sendmessage(channel, '{} has leveled up to level {}'.format(user.mention, lvl_end))
+        users[user.id]['level'] = lvl_end
+
+    
+#Commands
+
+@client.event
+async def on_message(message):
+    if message.content.startswith('-commands'):
+        em = discord.Embed( 
+            title='Commands',
+            description='A simple list of commands',
+            colour = discord.Colour.orange()
+        )
+        em.add_field(name='**Fun/Games**', value='-8ball\n-shoot', inline=True)
+        em.add_field(name='**Anime Gifs**', value='-nezukogif\n-nezukorunningmeme\n-jojo', inline=True)
+        em.add_field(name='**Misc.**', value='-menu\n-clear', inline=False)
+        em.set_footer(text='Thanks for utilizing my bot ^-^')
+        em.set_author(name='Jaden#6666',
+        icon_url='https://cdn.discordapp.com/avatars/549347721442754582/a_dbe3c19d7298e972a497cdefff207300.gif?size=128')
+        em.set_image(url='https://cdn.discordapp.com/avatars/641015595168432169/537a92cd882bb8e6bb05b35b827962b6.png?size=128')
+
+        await message.channel.send('', embed=em)
+
+    if message.content.startswith('-nezukogif'):
+        randomgif=['https://media.giphy.com/media/ghBwyDXSAEto8PztXc/giphy.gif', 'https://media1.tenor.com/images/08aea234985337f204997fdba0cfce38/tenor.gif?itemid=15688586', 'https://media1.giphy.com/media/dAu9Hz9xEDMPCw6Lwz/source.gif',]
+        em = discord.Embed(
+            title='Nezuko GIF executed.',
+            colour = discord.Colour.purple()
+        )
+        em.set_image(url= (random.choice(randomgif)))
+        await message.channel.send(embed=em)
+
+    if message.content.startswith('-nezukorunningmeme'):
+        em = discord.Embed(
+            description='**Sonic the Hedgehog music starts playing**',
+            colour = discord.Colour.purple()
+            )
+        em.set_image(url='https://media.giphy.com/media/UTSDPWVW4Llw1rPC9k/giphy.gif')
+        await message.channel.send('', embed=em)
+
+    if message.content.startswith('-menu'):
+        em = discord.Embed(
+            title='Menu',
+            description='Menu to order food from :).',
+            colour = discord.Colour.blue()
+        )
+        em.add_field(name='**McDonalds Food:**', value='Big Mac\nChicken McNuggets\nFrench Fries', inline=True)
+        em.add_field(name='**Beverages:**', value='Sprite\nCoca-Cola\nPepsi\nRoot Beer', inline=True)
+        em.add_field(name='**KFC Food:**', value='Chicken Bucket\nChicken Tenders', inline=True)
+        em.set_footer(text='More will be coming soon...')
+        await message.channel.send('', embed=em)
+
+    if message.content.startswith('-big mac'):
+        em = discord.Embed(
+            title='Big Mac',
+            description='Your order has came through :)',
+            colour = discord.Colour.red()
+        )
+        em.set_image(url='https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/hero/desktop/t-mcdonalds-Big-Mac.jpg?$Product_Desktop$')
+        await message.channel.send('', embed=em)
+
+    if message.content.startswith('-chicken mcnuggets'):
+        em = discord.Embed(
+            title='Chicken McNuggets',
+            description='Your order has came through :)',
+            colour = discord.Colour.red()
+        )
+        em.set_image(url='https://upload.wikimedia.org/wikipedia/commons/d/d0/McDonalds-Chicken-McNuggets.jpg')
+        await message.channel.send('', embed=em)
+
+    if message.content.startswith('-french fries'):
+        em = discord.Embed(
+            title='French Fries',
+            description='Your order has came through :)',
+            colour = discord.Colour.red()
+        )
+        em.set_image(url='https://www.mcdonalds.com/is/image/content/dam/usa/nfl/nutrition/items/hero/desktop/t-mcdonalds-Fries-Small-Medium.jpg?$Product_Desktop$')
+        await message.channel.send('', embed=em)
+
+    if message.content.startswith('-sprite'):
+        em = discord.Embed(
+            title='Sprite',
+            description='Your order has came through :)',
+            colour = discord.Colour.red()
+        )
+        em.set_image(url='https://images-na.ssl-images-amazon.com/images/I/71Y5MLLmknL._SL1500_.jpg')
+        await message.channel.send('', embed=em)
+
+    if message.content.startswith('-cocacola'):
+        em = discord.Embed(
+            title='Coca-Cola',
+            description='Your order has came through :)',
+            colour = discord.Colour.red()
+        )
+        em.set_image(url='https://images-na.ssl-images-amazon.com/images/I/71W%2BHikjmKL._SL1500_.jpg')
+        await message.channel.send('', embed=em)
+
+    if message.content.startswith('-pepsi'):
+        em = discord.Embed(
+            title='Pepsi',
+            description='Your order has came through :)',
+            colour = discord.Colour.red()
+        )
+        em.set_image(url='https://www.pepsi.com/en-us/uploads/images/social-share.jpg?mtime=20180110134930')
+        await message.channel.send('', embed=em)
+
+    if message.content.startswith('-rootbeer'):
+        em = discord.Embed(
+            title='Root Beer',
+            description='Your order has came through :)',
+            colour = discord.Colour.red()
+        )
+        em.set_image(url='https://upload.wikimedia.org/wikipedia/commons/7/7d/Root_beer_in_glass_mug.jpg')
+        await message.channel.send('', embed=em)
+
+    if message.content.startswith('-chickenbucket'):
+        em = discord.Embed(
+            title='Chicken Bucket',
+            description='Your order has came through :)',
+            colour = discord.Colour.red()
+        )
+        em.set_image(url='https://www.thepackagingcompany.us/knowledge-sharing/wp-content/uploads/2018/09/ip-kfcbucket-blog.jpg')
+        await message.channel.send('', embed=em)
+
+    if message.content.startswith('-chickentenders'):
+        em = discord.Embed(
+            title='Chicken Tenders',
+            description='Your order has came through :)',
+            colour = discord.Colour.red()
+        )
+        em.set_image(url='https://www.dinneratthezoo.com/wp-content/uploads/2015/04/chicken-fingers-4.jpg')
+        await message.channel.send('', embed=em)
+
+    if message.content.startswith('-test'):
+        em = discord.Embed(
+            title = 'commands',
+            description = 'Testing',
+            colour = discord.Colour.blue()
+        )
+        await message.channel.send('', embed=em)
+
     if message.content.startswith('-8ball'):
         randomlist = ['Maybe','Yes','No',]
-        await client.send_message(message.channel,(random.choice(randomlist)))
-    if message.content.startswith('-kill'):
-        randomlist = ['The bullet bounced back and hit you','You hit the person',]
-        await client.send_message(message.channel,(random.choice(randomlist)))
-    if message.content == '-menu':
-        await client.send_message(message.channel,'You can order a, Big mac, A whooper, and a large soda (pls note that you dont have to use the prefix for these commands)')
-    if message.content == 'Big mac':
-        await client.send_message(message.channel,'*Gives*')
-    if message.content == 'big mac':
-        await client.send_message(message.channel,'*Gives*')
-    if message.content == 'Big Mac':
-        await client.send_message(message.channel,'*Gives*')
-    if message.content == 'Whooper':
-        await client.send_message(message.channel,'*Gives*')
-    if message.content == 'whooper':
-        await client.send_message(message.channel,'*Gives*')
-    if message.content == 'Large Soda':
-        await client.send_message(message.channel,'*Gives*')
-    if message.content == 'Large soda':
-        await client.send_message(message.channel,'*Gives*')
-    if message.content == 'large soda':
-        await client.send_message(message.channel,'*Gives*')
-    if message.content == '-about':
-        await client.send_message(message.channel,'A little about Gold. Well Gold is the owner of this bot. He is a die hard Pokemon fan (It may sound childish but its amazing). Gold also, likes Zelda and has completed all Zelda and Pokemon games. Gold has caught them all in Pokemon Omega Ruby. Golds favorite Pokemon game is Pokemon Heartgold (Thats how I got my username LMAO). Gold Originated from Roblox as the user "jayboss980". He was a stupid kid then. But soon later he quit and started getting intrested in coding and created his first bot "Jays Assistant". This bot was absolute CRAP. It could only do 4 commands and those 4 commands are in this bot. (BUT THERE HIDDEN so dont even try).')
-    if message.content == '-Alexis':
-        await client.send_message(message.channel,'Alexis originaly was named "AlteriaALPHA". And, since I was new to coding and didnt even host his bot 24/7.\n He used github. AND PASTED HIS BOTS TOKEN. So somebody stole my bots token and destroyed everyone of my friends Discord servers and mine. (This is a screenshot https://cdn.discordapp.com/attachments/516304668528214016/516370555260370945/image0.png) But after that. I still had a old file of Alteria and added insane protection to Alteria so nobody can touch it. That bots name was called AlteriaREWRITE.')
-    if message.content == '-alexis':
-        await client.send_message(message.channel,'Alexis originaly was named "AlteriaALPHA". And, since I was new to coding and didnt even host his bot 24/7.\n He used github. AND PASTED HIS BOTS TOKEN. So somebody stole my bots token and destroyed everyone of my friends Discord servers and mine. (This is a screenshot https://cdn.discordapp.com/attachments/516304668528214016/516370555260370945/image0.png) But after that. I still had a old file of Alteria and added insane protection to Alteria so nobody can touch it. That bots name was called AlteriaREWRITE.')
-    if message.content.startswith('-missletoe'):
-        randomlist = ['You Walked under a missletoe and got kissed','Nobody saw you walk under the missletoe',]
-        await client.send_message(message.channel,(random.choice(randomlist)))
-    if message.content == ('-stats'):
-        await client.send_message(message.channel,'`This bot is running on Microsoft windows 64x bit. Shard: 1/2`')
-    if message.content == ('-upload'):
-        if message.author.id == "403211149631553536":
-            await client.send_message(message.channel,'** @everyone Hello, Gold just uploaded a Youtube Video about Alteria. Go check it out--->https://www.youtube.com/channel/UCR6r5mq-pD3201_CBY-YeLA?view_as=subscriber**')
-        else:
-            await client.send_message(message.channel, "Only the owner of this bot can access this command. Sorry!")
-    if message.content == '-christmas':
-        em = discord.Embed(description='Merry Christmas!')
-        em.set_image(url='https://media.giphy.com/media/3o6ZsS7qkBvNtjIzPG/giphy.gif')
-        await client.send_message(message.channel, embed=em)
-    if message.content == '-bomb':
-        em = discord.Embed(description='You bombed the channel!')
-        em.set_image(url='https://media.giphy.com/media/X92pmIty2ZJp6/giphy.gif')
-        await client.send_message(message.channel, embed=em)  
+        randomgif = ['https://media3.giphy.com/media/141iprzbEPjCiQ/giphy.gif', 'https://i.imgur.com/akdtE4H.gif', 'https://thumbs.gfycat.com/QuestionableMajesticBillygoat-small.gif',]
+        em = discord.Embed(
+            title="The magic 8 ball has spoken.",
+            description=(random.choice(randomlist)),
+            colour = discord.Colour.blurple()
+        )
+        em.set_image(url= (random.choice(randomgif)))
+        await message.channel.send(embed=em)
+    
+    if message.content.startswith('-jojo'):
+        randomlist = ['https://media.giphy.com/media/h7FZESJ1Ter5bGhUDG/giphy.gif',  'https://thumbs.gfycat.com/ForthrightBoldDaddylonglegs-max-1mb.gif', 'https://media.giphy.com/media/f9jxYYRVPHtKsCf9sy/giphy.gif']
+        em = discord.Embed(
+            title='Here is your Jojo gif.',
+            description=':)',
+            colour = discord.Colour.purple()
+        )
+        em.set_image(url= (random.choice(randomlist)))
+        await message.channel.send(embed=em)
+
+    if message.content.startswith('-clear'):
+        amount=5
+        await message.channel.purge(limit=amount)
+
+    if message.content.startswith('-shoot'):
+        em = discord.Embed(
+            title='You have been shot!',
+            description='You have a gun shot in your chest',
+            colour = discord.Colour.green()
+        )
+        em.set_image(url='https://media.giphy.com/media/9umH7yTO8gLYY/giphy.gif')
+        await message.channel.send('', embed=em)
 client.run(str(os.environ.get('BOT_TOKEN')))
 

@@ -80,7 +80,7 @@ async def on_message(message):
             colour = discord.Colour.orange()
         )
         em.add_field(name='**Fun/Games**', value='-8ball\n-shoot', inline=True)
-        em.add_field(name='**Anime Gifs**', value='-nezukogif\n-nezukorunningmeme\n-jojo', inline=True)
+        em.add_field(name='**Anime Gifs**', value='-nezukogif\n-nezukorunningmeme\n-jojo\n-demonslayer', inline=True)
         em.add_field(name='**Misc.**', value='-menu\n-clear', inline=False)
         em.set_footer(text='Thanks for utilizing my bot ^-^')
         em.set_author(name='Jaden#6666',
@@ -240,5 +240,15 @@ async def on_message(message):
         )
         em.set_image(url='https://media.giphy.com/media/9umH7yTO8gLYY/giphy.gif')
         await message.channel.send('', embed=em)
+     
+    if message.content.startswith('-demonslayer'):
+        randomlist = ['https://media.giphy.com/media/VEzYdo930nTiTuVeMU/giphy.gif',  'https://media.giphy.com/media/J6JazAkCVLId91L4yM/giphy.gif', 'https://media.giphy.com/media/Yq1tXTNe5PDdQEhKXG/giphy.gif', 'https://media.giphy.com/media/TgyJebqyMtPrOxiPdk/giphy.gif', 'https://media.giphy.com/media/f7k6TfAFkiAqKVcJGH/giphy.gif', 'https://media.giphy.com/media/JrHB5IyuBzKwPEPZe4/giphy.gif', 'https://media.giphy.com/media/H83c2x0NWvFhtgK4V2/giphy.gif', 'https://media.giphy.com/media/ZaueN0ipnurQlgKsRu/giphy.gif', 'https://media.giphy.com/media/dVcrkGH9DU9EpdGsV8/giphy.gif']
+        em = discord.Embed(
+            title='Demon Slayer Gif!',
+            description=':)',
+            colour = discord.Colour.purple()
+        )
+        em.set_image(url= (random.choice(randomlist)))
+        await message.channel.send(embed=em)
 client.run(str(os.environ.get('BOT_TOKEN')))
 

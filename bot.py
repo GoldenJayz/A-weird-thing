@@ -3,6 +3,7 @@ from discord.ext import commands
 from discord import Permissions
 import string
 import random
+import os
 
 client = commands.Bot(command_prefix = '.')
 

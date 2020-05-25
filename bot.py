@@ -73,7 +73,7 @@ async def level_up(users, user, channel):
 
 @client.command
 async def commands(ctx):
-    em = discord.Embed( 
+        em = discord.Embed( 
             title='Commands',
             description='A simple list of commands',
             colour = discord.Colour.orange()
